@@ -1,0 +1,850 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Maze3</title></head><body><h2>Labirint</h2p><p id="x">20</p><p> x </p><p id="y">20</p><button type="button" onclick="left()">Left</button><button type="button" onclick="right()">Right</button><button type="button" onclick="top()">Top</button><button type="button" onclick="bottom()">Bottom</button><table style="border: 2px solid rgb(221, 221, 221); display: table;">
+<tr>
+<td id="0" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="1" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="2" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="3" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="4" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="5" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="6" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="7" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="8" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="9" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="10" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="11" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="12" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="13" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="14" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="15" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="16" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="17" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="18" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="19" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="20" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="21" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;">
+</td>
+<td id="22" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="23" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="24" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="25" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="26" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="27" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="28" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="29" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+<td id="30" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="31" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="32" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="33" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="34" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="35" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="36" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="37" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="38" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="39" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="40" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="41" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="42" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="43" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="44" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="45" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="46" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="47" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="48" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="49" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="50" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="51" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="52" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="53" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="54" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="55" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="56" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="57" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="58" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="59" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="60" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="61" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="62" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="63" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="64" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="65" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="66" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="67" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="68" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="69" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="70" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="71" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="72" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="73" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="74" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="75" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="76" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="77" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="78" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="79" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="80" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="81" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="82" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="83" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="84" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="85" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="86" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="87" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="88" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="89" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="90" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="91" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="92" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="93" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="94" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="95" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="96" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="97" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="98" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="99" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="100" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="101" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="102" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+<td id="103" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="104" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="105" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="106" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="107" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="108" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="109" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="110" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="111" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="112" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="113" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="114" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="115" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="116" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="117" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="118" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="119" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+</tr>
+<tr>
+<td id="120" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="121" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="122" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="123" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="124" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="125" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="126" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="127" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="128" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="129" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="130" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="131" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="132" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="133" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="134" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="135" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="136" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="137" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="138" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+<IMG src="./new-year-composition9.gif">
+</td>
+<td id="139" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="140" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="141" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="142" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="143" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="144" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="145" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="146" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="147" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="148" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="149" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="150" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="151" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="152" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="153" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="154" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="155" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="156" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="157" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="158" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="159" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="160" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="161" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="162" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="163" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="164" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="165" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="166" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="167" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="168" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="169" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="170" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="171" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="172" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="173" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="174" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="175" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="176" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="177" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+<IMG src="./new-year-composition9.gif">
+</td>
+<td id="178" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="179" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="180" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="181" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="182" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="183" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="184" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="185" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="186" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="187" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="188" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="189" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="190" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="191" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="192" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="193" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="194" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="195" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="196" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="197" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="198" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="199" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;border-right: none;">
+</td>
+</tr>
+<tr>
+<td id="200" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="201" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="202" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="203" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="204" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="205" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="206" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="207" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="208" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="209" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="210" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="211" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="212" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="213" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;">
+</td>
+<td id="214" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="215" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;border-right: none;">
+</td>
+<td id="216" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="217" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="218" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="219" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="220" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="221" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="222" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="223" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="224" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="225" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="226" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="227" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="228" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="229" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="230" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="231" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="232" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="233" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="234" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="235" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="236" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="237" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="238" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="239" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+</tr>
+<tr>
+<td id="240" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="241" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="242" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="243" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="244" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="245" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="246" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="247" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="248" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+<td id="249" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="250" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="251" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="252" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="253" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="254" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="255" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="256" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="257" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="258" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="259" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="260" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="261" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="262" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="263" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="264" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="265" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;">
+</td>
+<td id="266" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="267" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="268" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="269" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+<IMG src="./new-year-composition9.gif">
+</td>
+<td id="270" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="271" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="272" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="273" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="274" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="275" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+<IMG src="./new-year-composition9.gif">
+</td>
+<td id="276" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="277" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+<IMG src="./new-year-composition9.gif">
+</td>
+<td id="278" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="279" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="280" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="281" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="282" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="283" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="284" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="285" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="286" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="287" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="288" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;">
+</td>
+<td id="289" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="290" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="291" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="292" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="293" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="294" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="295" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+<td id="296" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="297" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="298" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="299" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="300" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="301" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="302" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="303" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+<td id="304" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="305" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="306" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="307" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="308" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="309" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="310" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="311" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="312" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="313" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="314" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="315" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="316" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="317" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="318" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="319" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="320" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="321" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="322" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;">
+</td>
+<td id="323" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="324" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="325" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="326" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="327" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+<IMG src="./new-year-composition9.gif">
+</td>
+<td id="328" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="329" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="330" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="331" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="332" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="333" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="334" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="335" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="336" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="337" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="338" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="339" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+</tr>
+<tr>
+<td id="340" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="341" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="342" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="343" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="344" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="345" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="346" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="347" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="348" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="349" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-left: none;">
+</td>
+<td id="350" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="351" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="352" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="353" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="354" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="355" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="356" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="357" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="358" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="359" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="360" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;border-right: none;">
+</td>
+<td id="361" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="362" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="363" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="364" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="365" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="366" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="367" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="368" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="369" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="370" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="371" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="372" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="373" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+<td id="374" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-right: none;">
+</td>
+<td id="375" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="376" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="377" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-bottom: none;border-left: none;">
+</td>
+<td id="378" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="379" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-bottom: none;">
+</td>
+</tr>
+<tr>
+<td id="380" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;">
+</td>
+<td id="381" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="382" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="383" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="384" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="385" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="386" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="387" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="388" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="389" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="390" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="391" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;">
+</td>
+<td id="392" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-right: none;">
+</td>
+<td id="393" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="394" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+<td id="395" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-right: none;">
+</td>
+<td id="396" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="397" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;border-right: none;">
+</td>
+<td id="398" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-left: none;border-right: none;">
+</td>
+<td id="399" style="border: 2px solid rgb(221, 221, 221); width: 30px;height: 30px;border-top: none;border-left: none;">
+</td>
+</tr>
+<script type="text/javascript" src="./Ded-Moroz.js"></script>
+</body></html>
