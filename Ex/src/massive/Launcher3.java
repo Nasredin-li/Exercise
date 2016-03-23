@@ -31,12 +31,13 @@ public class Launcher3 {
 			
 			}
 			outputStream = new java.io.PrintWriter(new java.io.FileWriter("d:\\Serge\\java\\Ded-Moroz.js"));
-			
+			outputStream.println("var data=[");
 			for (int i = 0; i < a * b;i++) {
 				
-				outputStream.println("var data" + i + "=[" + maze[i][2] + ", " + maze[i][3] + ", " + maze[i][4]
-						+ ", " + maze[i][5] + "];");
+				outputStream.println( "[" + maze[i][2] + ", " + maze[i][3] + ", " + maze[i][4]
+						+ ", " + maze[i][5] + "], ");
 			}
+			outputStream.println("];");
 			for (String e : javascript) {
 				outputStream.println(e);
 			}
