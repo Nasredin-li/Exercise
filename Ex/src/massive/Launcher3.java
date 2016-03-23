@@ -11,7 +11,7 @@ public class Launcher3 {
 		BufferedReader inputStream = null;
 		java.io.PrintWriter outputStream = null;
 		try {
-			int a = 20;
+			int a = 10;
 			int b = 20;
 			int[] gift = new int[a / 3];
 			for (int f = 0; f < gift.length; f++) {
@@ -19,45 +19,61 @@ public class Launcher3 {
 			}
 			Mass3 mass = new Mass3(a, b);
 			int[][] maze = mass.getRealMazeSorted();
-			inputStream = new BufferedReader(
-					new FileReader("d:\\Serge\\java\\Ded-Moroz.js"));
+			/*inputStream = new BufferedReader(new FileReader("d:\\Serge\\java\\Ded-Moroz.js"));
 			ArrayList<String> javascript = new ArrayList<String>();
 			String c;
 			while ((c = inputStream.readLine()) != null) {
-				if(c.startsWith("var data")==false){
-					javascript.add(c);	
+				if (c.startsWith("var data") == false) {
+					if (c.startsWith("[") == false) {
+						if (c.startsWith("];") == false) {
+							if (c.startsWith("var y=") == false) {
+								if (c.startsWith("var x=") == false) {
+									javascript.add(c);
+								}
+							}
+							
+						}
+					}
 				}
-				
-			
-			}
-			outputStream = new java.io.PrintWriter(new java.io.FileWriter("d:\\Serge\\java\\Ded-Moroz.js"));
+
+			}*/
+			outputStream = new java.io.PrintWriter(new java.io.FileWriter("d:\\Serge\\java\\Ded-Moroz2.js"));
 			outputStream.println("var data=[");
-			for (int i = 0; i < a * b;i++) {
-				
-				outputStream.println( "[" + maze[i][2] + ", " + maze[i][3] + ", " + maze[i][4]
-						+ ", " + maze[i][5] + "], ");
+			for (int i = 0; i < a * b; i++) {
+
+				outputStream
+						.println("[" + maze[i][2] + ", " + maze[i][3] + ", " + maze[i][4] + ", " + maze[i][5] + "], ");
 			}
 			outputStream.println("];");
-			for (String e : javascript) {
-				outputStream.println(e);
+			outputStream.println("var y="+a);
+			outputStream.println("var x="+b);
+			outputStream.print("var gift=[");
+			for(int f = 0; f < gift.length; f++) {
+				outputStream.print(gift[f]);
+				if(f<gift.length-1){
+					outputStream.print(",");
+				}
 			}
-			
+			outputStream.println("];");
+			/*for (String e : javascript) {
+				outputStream.println(e);
+			}*/
+
 			if (outputStream != null) {
 				outputStream.close();
 			}
-			
 
 			outputStream = new java.io.PrintWriter(new java.io.FileWriter("d:\\Serge\\java\\Maze3.htm"));
 
 			outputStream.println("<!DOCTYPE HTML>");
-			outputStream.println("<html><head>" + "<meta charset=\"UTF-8\">" + "<title>Maze3</title>" + "</head>"
-					+ "<body>"
-					+"<h2>Labirint</h2p><p id=\"x\">"+a+"</p><p> x </p><p id=\"y\">"+b+"</p>"
-					+ "<button type=\"button\" onclick=\"left()\">Left</button>"
-					+ "<button type=\"button\" onclick=\"right()\">Right</button>"
-					+ "<button type=\"button\" onclick=\"top()\">Top</button>"
-					+ "<button type=\"button\" onclick=\"bottom()\">Bottom</button>" + "<table style=" + "\""
-					+ "border: 2px solid rgb(221, 221, 221); display: table;\">");
+			outputStream.println("<html><head>" + "<meta charset=\"UTF-8\">" + "<title>Maze3</title>" 
+
+					+ "</head>" + "<body>" + "<h2 align=\"center\">Labirint</h2p>"
+					+ "<div><button type=\"button\" onclick=\"left()\"><IMG src=\"./StrelkaL.gif\" ></button>"
+					+ "<button type=\"button\" onclick=\"right()\"><IMG src=\"./StrelkaR.gif\" ></button>"
+					+ "<button type=\"button\" onclick=\"top()\"><IMG src=\"./Strelka.gif\"></button>"
+					+ "<button type=\"button\" onclick=\"bottom()\"><IMG src=\"./StrelkaB.gif\" ></button></div>" + "<table style=" + "\""
+					+ "border: 2px solid rgb(221, 221, 221);\">");
 			for (int i = 0; i < a * b;) {
 				for (int y = 0; y < a; y++) {
 					outputStream.println("<tr>");
@@ -91,7 +107,13 @@ public class Launcher3 {
 					outputStream.println("</tr>");
 				}
 			}
-			outputStream.println("<script type=\"text/javascript\" src=\"./Ded-Moroz.js\"></script>");
+			
+			for(int f = 0; f < gift.length; f++) {
+				outputStream.print("<div id=\"oneGift"+ f +"\"></div>");
+			}
+			outputStream.println("<script type=\"text/javascript\" src=\"./Ded-Moroz2.js\"></script>");
+			outputStream.println("<script type=\"text/javascript\" src=\"./Ded-Moroz3.js\"></script>");
+			
 			outputStream.println("</body></html>");
 
 		} catch (IOException e) {
