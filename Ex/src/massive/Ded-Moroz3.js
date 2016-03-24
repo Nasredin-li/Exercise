@@ -1,17 +1,27 @@
 
 
 var position=0;
+
+var cadeau=0;
+
 document.getElementById(position).innerHTML="<IMG src=\"./Ded-Moroz.gif\">";
 function giftCount(position, cadeau, gift){
 	for(h=0; h < gift.length; h++){
-		if(position==gift[h]){
-			cadeau++;
-alert(cadeau);
+		if(position==gift[h]){	
 			var c="oneGift"+h.toString();
 			document.getElementById(c).innerHTML="<IMG src=\"./new-year-composition9.gif\">";
+			ca();
 		}
 	}
 }
+function ca(){cadeau+=1;
+if(cadeau==gift.length){
+if(confirm("You vant else?")==true){
+	alert("OK");
+}
+}
+}
+	
 
 function right()
 {
@@ -55,7 +65,7 @@ var keycode;
 if(!event) var event = window.event;
 if (event.keyCode) keycode = event.keyCode; 
 else if(event.which) keycode = event.which; 
-var cadeau=0;
+
 
 switch (keycode)
 {
@@ -74,8 +84,6 @@ break ;
 case 40: 
 bottom(); 
 giftCount(position,cadeau,gift);
-
 break;
-
 }
 }

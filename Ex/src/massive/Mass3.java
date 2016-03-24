@@ -160,8 +160,7 @@ public class Mass3 {
 	
 
 	private static int[][] realMazeSorted(int[][] realMazeSorted, int[][] maze, int length, int a, int b) {
-		//realMazeSorted = new int[length][6];
-		//fullRealMazeSorted(realMazeSorted, a, b);
+		
 		for (int i = 0; i < length; i++) {
 			for (int e = 0; e < maze.length; e++) {
 				if (realMazeSorted[i][0] == maze[e][0] && realMazeSorted[i][1] == maze[e][1]) {
