@@ -11,8 +11,8 @@ public class Launcher3 {
 		BufferedReader inputStream = null;
 		java.io.PrintWriter outputStream = null;
 		try {
-			int a = 10;
-			int b = 20;
+			int a = 8;
+			int b = 10;
 			int[] gift = new int[a / 2];
 			for (int f = 0; f < gift.length; f++) {
 				gift[f] = ((int) (Math.random() * a * b));
@@ -41,22 +41,22 @@ public class Launcher3 {
 		java.io.PrintWriter outputStream;
 		outputStream = new java.io.PrintWriter(new java.io.FileWriter("d:\\Serge\\java\\Maze3.htm"));
 
-		outputStream.println("<!DOCTYPE HTML>");
-		outputStream.println("<html>");
+		outputStream.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+		outputStream.println("<html xmlns=\"http://www.w3.org/1999/xhtml\">");
 		outputStream.println("<head>");
-		outputStream.println("<meta charset=\"UTF-8\">");
+		outputStream.println("<meta  http-equiv=\"Content-Type\" content=\"text/html; charset=\"UTF-8\">");
 		outputStream.println("<title>Maze3</title>");
-
+		outputStream.println("<link href=\"Training1.css\" rel=\"stylesheet\" type=\"text/css\" />");
 		outputStream.println("</head>");
-		outputStream.println("<body>");
-		outputStream.println("<h2 align=\"center\">Labirint</h2>");
-		outputStream.println("<table align=\"center\" style=\"border: 2px solid rgb(30, 70, 240);\">");
+		outputStream.println("<body background=\"../Dis/11.jpg\" id=\"fon\" >");
+		outputStream.println("<h2 id=\"h1\">Labirint</h2>");
+		outputStream.println("<table id=\"tbl\" style=\"border: 2px solid rgb(30, 70, 240);\">");
 		for (int i = 0; i < a * b;) {
 			for (int y = 0; y < a; y++) {
 				outputStream.println("<tr>");
 				for (int x = 0; x < b; x++) {
 					outputStream.print("<td id=\"" + i + "\""
-							+ " style=\"border: 2px solid rgb(30, 70, 240); width: 30px;height: 30px;");
+							+ " style=\"border: 2px solid rgb(30, 70, 240); width: 35px;height: 35px;");
 
 					if (maze[i][2] != 0) {
 						outputStream.print("border-top: none;");
@@ -70,12 +70,12 @@ public class Launcher3 {
 					if (maze[i][5] != 0) {
 						outputStream.print("border-right: none;");
 					}
-					outputStream.println("\">");
-					for (int u = 0; u < a / 2; u++) {
-						if (i == gift[u]) {
-							outputStream.println("<IMG src=\"./new-year-composition9.gif\">");
-							break;
-						}
+					outputStream.print("\">");
+					String giftG=pasteGift(a, gift, outputStream, i);
+					if(giftG==null){
+						outputStream.print("&nbsp;");
+					}else {
+						outputStream.print(giftG);
 					}
 					outputStream.println("</td>");
 
@@ -86,7 +86,7 @@ public class Launcher3 {
 			outputStream.println("</table>");
 		}
 		outputStream.println(
-				"<table width=\"500\" border=\"3\" align=\"center\" bordercolor=\"#009933\" id=\"more\"><tr><td width=\"200\" align=\"center\">"
+				"<table width=\"500\" border=\"3\" align=\"center\" bordercolor=\"#FFFFFF\" id=\"more\"><tr><td width=\"200\" align=\"center\">"
 						+ "<div><button type=\"button\" onclick=\"left()\"><IMG src=\"./StrelkaL.gif\" ></button>"
 						+ "<button type=\"button\" onclick=\"top()\"><IMG src=\"./Strelka.gif\"></button>"
 						+ "<button type=\"button\" onclick=\"right()\"><IMG src=\"./StrelkaR.gif\" ></button>"
@@ -95,12 +95,24 @@ public class Launcher3 {
 			outputStream.print(
 					"<td width=\"45\" align=\"center\" valign=\"middle\"><div id=\"oneGift" + f + "\"></div></td>");
 		}
+		
 		outputStream.println("</tr></table>");
+		outputStream.println("<p id=\"count\">—четчик шагов</p><p id=\"step\">0</p>");
 		outputStream.println("<script type=\"text/javascript\" src=\"./Ded-Moroz2.js\"></script>");
 		outputStream.println("<script type=\"text/javascript\" src=\"./Ded-Moroz3.js\"></script>");
 
 		outputStream.println("</body></html>");
 		return outputStream;
+	}
+
+	private static String pasteGift(int a, int[] gift, java.io.PrintWriter outputStream, int i) {
+		for (int u = 0; u < a / 2; u++) {
+			if (i == gift[u]) {
+				return "<IMG src=\"./new-year-composition9.gif\">";
+				
+			}
+		}
+		return null;
 	}
 
 	private static java.io.PrintWriter outputJS(int a, int b, int[] gift, int[][] maze) throws IOException {
