@@ -35,8 +35,8 @@ function chekGift(){
 		t2 = getTimePlay();
 		difference(); 
 		if(confirm("You vant else?")==true){
-			window.open("Maze2.htm");
-			
+			location.assign("Maze2.htm");
+			//assign
 		}
 	}
 }

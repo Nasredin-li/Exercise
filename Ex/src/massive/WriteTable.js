@@ -23,8 +23,7 @@ function printTable(){
 					if (data[i][3] != 0) {
 						table= table +'border-right: none;';
 					}
-					table= table +'\">';
-					pasteGift();
+					table= table +'\">&nbsp;';
 					table= table +'</td>';
 
 					i++;
@@ -38,14 +37,14 @@ function printTable(){
 
 function pasteGift(){
 		for(k=0; k<gift.length; k++){
-		if(gift[k]!=i){
-			table= table +'&nbsp;';
-		}else {
-			table= table + "<IMG src=\"./new-year-composition9.gif\">";
-		}
+		var g=gift[k];
+			document.getElementById(g).innerHTML= "<IMG src=\"./new-year-composition9.gif\">";
+		
+		
 	}
 }
 document.getElementById("maze").innerHTML= table;
+pasteGift();
 
 var pointerAndGift = "<table width=\"500\" border=\"3\" align=\"center\" bordercolor=\"#FFFFFF\" id=\"more\"><tr><td width=\"200\" align=\"center\"><div><button type=\"button\" onclick=\"left()\"><IMG src=\"./StrelkaL.gif\" ></button><button type=\"button\" onclick=\"top()\"><IMG src=\"./Strelka.gif\"></button><button type=\"button\" onclick=\"right()\"><IMG src=\"./StrelkaR.gif\" ></button><button type=\"button\" onclick=\"bottom()\"><IMG src=\"./StrelkaB.gif\" ></button></div></td>";
 tableForGifts();
